@@ -847,8 +847,8 @@ class NgSpiceShared:
         if rc:  # Fixme: when not 0 ???
             raise NameError("ngSpice_Command '{}' returned {}".format(command, rc))
 
-        if self._error_in_stdout or self._error_in_stderr:
-            raise NgSpiceCommandError("Command '{}' failed".format(command))
+        #if self._error_in_stdout or self._error_in_stderr:
+            #raise NgSpiceCommandError("Command '{}' failed".format(command))
 
         if join_lines:
             return self.stdout
